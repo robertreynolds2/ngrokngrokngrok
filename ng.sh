@@ -4,10 +4,5 @@ unzip ngrok-stable-linux-amd64.zip > /dev/null 2>&1
 unzip ngrok-stable-linux-amd64.zip.1 > /dev/null 2>&1
 read -p "Ctrl + V Authtoken: " CRP 
 ./ngrok authtoken $CRP 
-echo "us = United States (Dallas)"
-echo "eu = Europe (Frankfurt)"
-echo "ap = Asia/Pacific (Singapore)"
-echo "au = Australia (Sydney)"
-read -p "Chose Region: " CRP1 
-nohup ./ngrok tcp --region CRP1 3389 &>/dev/null &
+nohup ./ngrok tcp --region ap 3389 &>/dev/null &
 echo Downloading File From akuh.net
